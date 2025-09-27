@@ -23,8 +23,8 @@ EXCLUDE_PATHS += .*~
 EXCLUDE_PATHS += build/*
 EXCLUDE_PATHS += Makefile
 
-# Format the exclusion paths for the zip command, prefixing each with -x
-ZIP_EXCLUDES := $(foreach p,$(EXCLUDE_PATHS),-x "$(p)")
+# Format the exclusion paths for rsync
+RSYNC_EXCLUDES := $(foreach p,$(EXCLUDE_PATHS),--exclude='$(p)')
 
 # Declare phony targets to prevent conflicts with files of the same name
 .PHONY: zip clean help
@@ -41,8 +41,15 @@ zip: ## Create the zip archive in the build/ directory
 		echo "Error: $(TARGET_ZIP) already exists. Run 'make clean' first."; \
 		exit 1; \
 	fi
-	@echo "Creating archive: $(TARGET_ZIP)"
-	@zip -r $(TARGET_ZIP) . $(ZIP_EXCLUDES)
+	@# Stage files in a temporary directory to control the archive's root folder
+	@echo "Staging files for archive..."
+	@TMP_DIR=$$(mktemp -d); \
+	mkdir -p "$${TMP_DIR}/$(PROJECT_NAME)"; \
+	rsync -aq . "$${TMP_DIR}/$(PROJECT_NAME)/" $(RSYNC_EXCLUDES); \
+	echo "Creating archive: $(TARGET_ZIP)"; \
+	(cd "$${TMP_DIR}" && zip -qr "$(CURDIR)/$(TARGET_ZIP)" "$(PROJECT_NAME)"); \
+	echo "Cleaning up staged files..."; \
+	rm -r "$${TMP_DIR}"
 
 # Rule to clean up the generated zip file
 clean: ## Remove the generated zip archive from the build/ directory
