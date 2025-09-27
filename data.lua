@@ -31,9 +31,10 @@ local shortcut = {
   action = "spawn-item",
   item_to_spawn  = "station-group-nominator",
   order = "m[station-group-nominator]",
-  icon = "__station-group-nominator-forked__/graphics/icons/station-group-nominator-x32.png",
+  icon = "__station-group-nominator-forked__/graphics/icons/station-group-nominator.png",
+  icon_size = 32,
   small_icon = "__station-group-nominator-forked__/graphics/icons/station-group-nominator-x24.png",
-  disabled_small_icon = "__station-group-nominator-forked__/graphics/icons/station-group-nominator-x24-white.png",
+  small_icon_size = 24,
 }
 
 data:extend{item, shortcut}
