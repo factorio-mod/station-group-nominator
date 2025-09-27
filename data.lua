@@ -13,12 +13,16 @@ local item = {
   flags = {"only-in-cursor", "spawnable"},
   stack_size = 1,
   stackable = false,
-  selection_color = { r = 0.72, g = 0.45, b = 0.2, a = 1 },
-  alt_selection_color = { r = 0.72, g = 0.22, b = 0.1, a = 1 },
-  selection_mode = { "buildable-type", "same-force" },
-  alt_selection_mode = { "buildable-type", "same-force" },
-  selection_cursor_box_type = "entity",
-  alt_selection_cursor_box_type = "entity",
+  select = {
+    selection_mode = { "buildable-type", "same-force" },
+    selection_type = "entity",
+    border_color = { r = 0.72, g = 0.45, b = 0.2, a = 1 },
+  },
+  alt_select = {
+    selection_mode = { "buildable-type", "same-force" },
+    selection_type = "entity",
+    border_color = { r = 0.72, g = 0.22, b = 0.1, a = 1 },
+  },
 }
 
 local shortcut = {
