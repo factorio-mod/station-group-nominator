@@ -1,9 +1,9 @@
 {
-    "name": "station-group-nominator",
+    "name": "station-group-nominator-forked",
     "version": "1.0.1",
-    "title": "Station Group Nominator",
-    "author": "MarineZuh",
-    "homepage": "https://github.com/MarineZuh/station-group-nominator_0.18.1",
+    "title": "Station Group Nominator Forked",
+    "author": "pleroma",
+    "homepage": "https://github.com/factorio-mod/station-group-nominator-forked",
     "factorio_version": "2.0",
     "dependencies": [
         "? base >= 2.0"
