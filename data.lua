@@ -14,12 +14,12 @@ local item = {
   stack_size = 1,
   stackable = false,
   select = {
-    selection_mode = { "buildable-type", "same-force" },
+    mode = { "buildable-type", "same-force" },
     cursor_box_type = "entity",
     border_color = { r = 0.72, g = 0.45, b = 0.2, a = 1 },
   },
   alt_select = {
-    selection_mode = { "buildable-type", "same-force" },
+    mode = { "buildable-type", "same-force" },
     cursor_box_type = "entity",
     border_color = { r = 0.72, g = 0.22, b = 0.1, a = 1 },
   },
