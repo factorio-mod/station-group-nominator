@@ -31,33 +31,9 @@ local shortcut = {
   action = "spawn-item",
   item_to_spawn  = "station-group-nominator",
   order = "m[station-group-nominator]",
-  icon = {
-    filename = "__station-group-nominator__/graphics/icons/station-group-nominator-x32.png",
-    flags = {
-      "icon"
-    },
-    priority = "extra-high-no-scale",
-    scale = 1,
-    size = 32
-  },
-  small_icon = {
-    filename = "__station-group-nominator__/graphics/icons/station-group-nominator-x24.png",
-    flags = {
-      "icon"
-    },
-    priority = "extra-high-no-scale",
-    scale = 1,
-    size = 24
-  },
-  disabled_small_icon = {
-    filename = "__station-group-nominator__/graphics/icons/station-group-nominator-x24-white.png",
-    flags = {
-      "icon"
-    },
-    priority = "extra-high-no-scale",
-    scale = 1,
-    size = 24
-  },
+  icon = "__station-group-nominator__/graphics/icons/station-group-nominator-x32.png",
+  small_icon = "__station-group-nominator__/graphics/icons/station-group-nominator-x24.png",
+  disabled_small_icon = "__station-group-nominator__/graphics/icons/station-group-nominator-x24-white.png",
 }
 
 data:extend{item, shortcut}
