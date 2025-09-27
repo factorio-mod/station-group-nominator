@@ -6,7 +6,7 @@ local item = {
   show_in_library = false,
   icons = {
     {
-      icon = "__station-group-nominator__/graphics/icons/station-group-nominator.png",
+      icon = "__station-group-nominator-forked__/graphics/icons/station-group-nominator.png",
       icon_size = 32,
     }
   },
@@ -31,9 +31,9 @@ local shortcut = {
   action = "spawn-item",
   item_to_spawn  = "station-group-nominator",
   order = "m[station-group-nominator]",
-  icon = "__station-group-nominator__/graphics/icons/station-group-nominator-x32.png",
-  small_icon = "__station-group-nominator__/graphics/icons/station-group-nominator-x24.png",
-  disabled_small_icon = "__station-group-nominator__/graphics/icons/station-group-nominator-x24-white.png",
+  icon = "__station-group-nominator-forked__/graphics/icons/station-group-nominator-x32.png",
+  small_icon = "__station-group-nominator-forked__/graphics/icons/station-group-nominator-x24.png",
+  disabled_small_icon = "__station-group-nominator-forked__/graphics/icons/station-group-nominator-x24-white.png",
 }
 
 data:extend{item, shortcut}
