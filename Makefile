@@ -20,6 +20,7 @@ EXCLUDE_PATHS += .git/*
 EXCLUDE_PATHS += .gitignore
 EXCLUDE_PATHS += .aider*
 EXCLUDE_PATHS += .*~
+EXCLUDE_PATHS += build/*
 EXCLUDE_PATHS += Makefile
 
 # Format the exclusion paths for the zip command, prefixing each with -x
